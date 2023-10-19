@@ -43,14 +43,17 @@ def startImageChange(image):
     
     if(methodChoice == 'Binario'):
         #Retornando a imagem tratada da função
-        imageConverted = BinaryColorConvert(image, 100)
+        imageConverted = BinaryColorConvert(image, 50)
         #Mostrando a imagem com tratamento
         imageConverted.show()
-    else:
+    elif(methodChoice == 'Cinza'):
         #Retornando a imagem tratada da função
         imageConverted = grayScaleImageConvert(image)
         #Mostrando a imagem com tratamento
         imageConverted.show()
+    else:
+        print("Erro: Escolha uma das opções. Estaremos reiniciando o processo.")
+        init()   
      
 def init():
     #FUNÇÂO INICIAL
@@ -79,5 +82,5 @@ def init():
         image = newImage.convert('RGB')
         #Iniciando a escolha e tratamento da imagem
         startImageChange(image)
-    
 init()
+

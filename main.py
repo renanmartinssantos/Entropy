@@ -43,7 +43,7 @@ def startImageChange(image):
     
     if(methodChoice == 'Binario'):
         #Retornando a imagem tratada da função
-        imageConverted = BinaryColorConvert(image, 50)
+        imageConverted = BinaryColorConvert(image, 100)
         #Mostrando a imagem com tratamento
         imageConverted.show()
     elif(methodChoice == 'Cinza'):
